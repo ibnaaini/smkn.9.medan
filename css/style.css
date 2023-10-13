@@ -63,14 +63,16 @@ header{
 
 .navbar{
     display: flex;
+    /* margin-top: 20%; */
 }
 
 .navbar a{
-    font-size: 1rem;
-    padding: 11px 20px;
+    font-size: 1.3rem;
+    padding: 11px 40px;
     color: black;
     font-weight: 600;
     text-transform: uppercase;
+
 }
 
 .navbar a:hover{
@@ -106,49 +108,28 @@ header{
 /* navbar section ends */
 
 /* home section starts */
-.home{
+/* .home {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #132043;
+    flex-wrap: wrap;
+} */
+.home{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     background: #132043;
     gap: 1rem;
+    margin-top:5%;
 }
-
-.home-text{
-    flex: 1 1 17rem;
-}
-
-.home-img{
-    flex: 1 1 17rem;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    text-align: center;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
+.home-text {
+    flex: 1;
+    padding: 20px;
 }
 
 .home-text span{
@@ -164,12 +145,46 @@ header{
     font-weight: bolder;
 }
 
+
 .home-text h2{
     font-size: 1rem;
     font-weight: 500;
     color: #FFB000;
     text-transform: uppercase;
     margin: 0.5rem 0 1.4rem;
+}
+.home-img {
+    flex: 1;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    width:90%;
+    height:300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
 /* home section ends */
 
@@ -283,37 +298,27 @@ h1 {
     background: #ffffff;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    padding: 20px;
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top:5%;
 }
-  
-div.gallery {
-    border: 1px solid #ffffff;
+
+.slide {
+    display: none;
 }
-  
-div.gallery:hover {
-    border: 1px solid #ffffff;
-}
-  
-div.gallery img {
+
+.slide img {
     width: 100%;
-    height: 200px;
+    height: 350px;
 }
-  
-div.desc {
-    padding: 15px;
-    text-align: center;
-    color: white;
-    color: #000000;
-}
-  
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
 }
 /* gallery section ends */
 
@@ -425,16 +430,25 @@ div.desc {
         display: none;
         flex-direction: column;
     }
-    .home-text span{
-        font-size: 0.9rem;
+    .home {
+        flex-direction: column;
     }
-    .home-text h1{
-        font-size: 2.4rem;
+
+    .home-text,
+    .home-img {
+        flex: none;
+        width: 100%;
+        text-align: center;
     }
-    .home-text h2{
-        font-size: 1rem;
-        font-weight: 300;
+
+    .home-text h1 {
+        font-size: 24px;
     }
+
+    .home-text h2 {
+        font-size: 16px;
+    }
+    
     .jurusan-container-satu{
         justify-content: center;
         flex-wrap: wrap;
